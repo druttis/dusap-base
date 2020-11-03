@@ -11,7 +11,7 @@ public class TypeLiteral<T> {
         return new TypeLiteral<>(type);
     }
 
-    static <T> TypeLiteral<T> normalize(final TypeLiteral<T> typeLiteral) {
+    public static <T> TypeLiteral<T> normalize(final TypeLiteral<T> typeLiteral) {
         Objects.requireNonNull(typeLiteral, "typeLiteral");
         if (typeLiteral.getClass() == TypeLiteral.class) {
             return typeLiteral;
